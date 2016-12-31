@@ -29,8 +29,9 @@ document.addEventListener("deviceready", onDeviceReady, false);
 }
 
 function onDeviceReady() {
-	startWatch();
 	tegn();
+	startWatch();
+	document.getElementById("data").innerHTML="start";
 }
 
 function startWatch() {
