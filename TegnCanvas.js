@@ -25,13 +25,13 @@ var watchID = null;
 
 function onLoad(){
 	document.addEventListener("deviceready", onDeviceReady, false);
-	tegn();
+
 }
 
 function onDeviceReady() {
 	
 	startWatch();
-	document.getElementById("data").innerHTML="start";
+	//document.getElementById("data").innerHTML="start";
 }
 
 function startWatch() {

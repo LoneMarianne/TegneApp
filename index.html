@@ -5,9 +5,9 @@
 		<script type="text/javascript" src="TegnCanvas.js"></script>		
 	</head>
 
-	<body    onLoad="onLoad()" >	
+	<body    onLoad="onLoad(); tegn();" >	
 		<h1>Tegn på Canvas ved at tippe mobil </h1>
-		<canvas id="canvasTest" width="400" height="400"></canvas>
+		<canvas id="canvasTest" width="350" height="350"></canvas>
 		</br>
 		<table >
 			<tr><td></td> <td><button type="button"  onclick="flytO()"> O </button></td><td></td></tr>		
@@ -17,8 +17,9 @@
 			</tr>	
 			<tr><td></td> <td><button type="button"  onclick="flytN()"> N </button><td><td></td></tr>
 		</table>
+		<div id="data">Test</div>
 		<br><br><button type="button"  onclick="startWatch()"> Start</button>
 		<br>
-		<div id="data"></div>		
+				
 	</body>
 </html>
