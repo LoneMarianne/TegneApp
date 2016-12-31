@@ -24,18 +24,15 @@ function opdaterCanvas(){
 var watchID = null;
 
 function onLoad(){
-	document.addEventListener("deviceready", onDeviceReady, false);
-
+document.addEventListener("deviceready", onDeviceReady, false);
 }
 
 function onDeviceReady() {
-	
 	startWatch();
-	//document.getElementById("data").innerHTML="start";
 }
 
 function startWatch() {
-	var options = { frequency: 10 };
+	var options = { frequency: 1000 };
 	watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
 }
 
@@ -47,6 +44,20 @@ function stopWatch() {
 }
 
 function onSuccess(acceleration) {
+	var element = document.getElementById('data');
+
+	element.innerHTML = 'Acceleration X: ' + acceleration.x + '<br />' +
+	'Acceleration Y: ' + acceleration.y + '<br />' +
+	'Acceleration Z: ' + acceleration.z + '<br />' +
+	'Timestamp: ' + acceleration.timestamp + '<br />';
+}
+
+function onError() {
+	alert('onError!');
+}
+
+/*
+function onSuccess(acceleration) {
     var xAcc=acceleration.x;
 	var yAcc = acceleration.y;
 	document.getElementById("data").innerHTML= 'Acceleration X: ' + xAcc + '<br />' +
@@ -55,11 +66,9 @@ function onSuccess(acceleration) {
 	if(xAcc>2) flytV();
 	if(yAcc> 5) flytN();
 	if(yAcc<-1) flytO();
-}
+}*/
 
-function onError() {
-	alert('onError!');
-}
+
 
 
 function testKey(e){
