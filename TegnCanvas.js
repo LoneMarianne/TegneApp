@@ -42,7 +42,7 @@ function stopWatch() {
 		watchID = null;
 	}
 }
-
+/*
 function onSuccess(acceleration) {
 	var element = document.getElementById('data');
 
@@ -51,12 +51,12 @@ function onSuccess(acceleration) {
 	'Acceleration Z: ' + acceleration.z + '<br />' +
 	'Timestamp: ' + acceleration.timestamp + '<br />';
 }
-
+*/
 function onError() {
 	alert('onError!');
 }
 
-/*
+
 function onSuccess(acceleration) {
     var xAcc=acceleration.x;
 	var yAcc = acceleration.y;
@@ -66,7 +66,7 @@ function onSuccess(acceleration) {
 	if(xAcc>2) flytV();
 	if(yAcc> 5) flytN();
 	if(yAcc<-1) flytO();
-}*/
+}
 
 
 
