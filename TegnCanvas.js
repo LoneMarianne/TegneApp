@@ -24,12 +24,12 @@ function opdaterCanvas(){
 var watchID = null;
 
 function onLoad(){
-document.addEventListener("deviceready", onDeviceReady, false);
-
+	document.addEventListener("deviceready", onDeviceReady, false);
+	tegn();
 }
 
 function onDeviceReady() {
-	tegn();
+	
 	startWatch();
 	document.getElementById("data").innerHTML="start";
 }
