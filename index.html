@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tegn på Canvas</title>
+		<script type="text/javascript" src="TegnCanvas.js"></script>		
+	</head>
+
+	<body    onLoad="tegn()" onkeypress="testKey(event)">	
+		<h1>Tastatur og animation </h1>
+		<canvas id="canvasTest" width="400" height="400"></canvas>
+		</br>
+		<table >
+			<tr><td></td> <td><button type="button"  onclick="flytO()"> O </button></td><td></td></tr>		
+			<tr><td><button type="button"  onclick="flytV()"> V </button></td>
+				<td></td>
+				<td><button type="button"  onclick="flytH()"> H</button></td>
+			</tr>	
+			<tr><td></td> <td><button type="button"  onclick="flytN()"> N </button><td><td></td></tr>
+		</table>
+		<div id="data"></div>		
+	</body>
+</html>
