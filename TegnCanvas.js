@@ -25,15 +25,16 @@ var watchID = null;
 
 function onLoad(){
 document.addEventListener("deviceready", onDeviceReady, false);
-tegn();
+
 }
 
 function onDeviceReady() {
 	startWatch();
+	tegn();
 }
 
 function startWatch() {
-	var options = { frequency: 1000 };
+	var options = { frequency: 10 };
 	watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
 }
 
@@ -47,6 +48,8 @@ function stopWatch() {
 function onSuccess(acceleration) {
     var xAcc=acceleration.x;
 	var yAcc = acceleration.y;
+	document.getElementById("data").innerHTML= 'Acceleration X: ' + xAcc + '<br />' +
+	'Acceleration Y: ' + yAcc + '<br />';
 	if(xAcc<-2.5) flytH();
 	if(xAcc>2) flytV();
 	if(yAcc> 5) flytN();
